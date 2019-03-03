@@ -1,0 +1,14 @@
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\bin\Debug\zad3.exe.config
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\bin\Debug\zad3.exe
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\bin\Debug\zad3.pdb
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3.csprojResolveAssemblyReference.cache
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\MainWindow.g.cs
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\App.g.cs
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3_MarkupCompile.cache
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3_MarkupCompile.lref
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\MainWindow.baml
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3.g.resources
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3.Properties.Resources.resources
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3.csproj.GenerateResource.Cache
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3.exe
+c:\Users\MAK\documents\visual studio 2017\Projects\Wpf-pr-2\zad3\obj\Debug\zad3.pdb
