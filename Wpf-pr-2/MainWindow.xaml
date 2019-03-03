@@ -6,7 +6,38 @@
         xmlns:local="clr-namespace:Wpf_pr_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <WrapPanel>
+            <!--Navy, Blue, Aqua, Teal, Olive,
+            Green, Lime, Yellow, Orange, Red, Maroon,
+            Fuchsia, Purple, Black, Silver, Gray, White.-->
+            <Button Content="Navy" Foreground="Navy"></Button>
+            <Button Content="Blue" Foreground="Blue"></Button>
+            <Button Content="Aqua" Foreground="Aqua"></Button>
+            <Button Content="Teal" Foreground="Teal"></Button>
+            <Button Content="Olive" Foreground="Olive"></Button>
+            <Button Content="Green" Foreground="Green"></Button>
+            <Button Content="Lime" Foreground="Lime"></Button>
+            <Button Content="Yellow" Foreground="Yellow"></Button>
+            <Button Content="Orange" Foreground="Orange"></Button>
+            <Button Content="Red" Foreground="Red"></Button>
+            <Button Content="Maroon" Foreground="Maroon"></Button>
+            <Button Content="Fuchsia" Foreground="Fuchsia"></Button>
+            <Button Content="Purple" Foreground="Purple"></Button>
+            <Button Content="Black" Foreground="Black"></Button>
+            <Button Content="Silver" Foreground="Silver"></Button>
+            <Button Content="Gray" Foreground="Gray"></Button>
+            <Button Content="White" Foreground="White"></Button>
+        </WrapPanel>
+
     </Grid>
 </Window>

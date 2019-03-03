@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Wpf_pr_2
+namespace zad2
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,7 +23,6 @@ namespace Wpf_pr_2
         public MainWindow()
         {
             InitializeComponent();
-            
         }
     }
 }
