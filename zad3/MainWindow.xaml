@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:zad3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="300">
+        Title="Калькулятор 1337" Height="350" Width="300">
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
@@ -28,7 +29,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
+            
             <Button Content="CE" Grid.Row="0" Grid.Column="0" Click="CE_click"></Button>
             <Button Content="C" Grid.Row="0" Grid.Column="1" Click="c_click"></Button>
             <Button Content="←" Grid.Row="0" Grid.Column="2" Click="arrow_click" FontWeight="Bold"></Button>

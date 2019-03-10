@@ -21,12 +21,10 @@ namespace zad3
     public partial class MainWindow : Window
     {
         string goodstring;
-        string numString;
 
         int numLength;
 
-        bool lastEq;
-        bool lastSymb;
+        //bool lastSymb;
         bool first;
 
         public string Goodstring { get => goodstring; set { goodstring = value; upperText.Text = goodstring; } }
@@ -36,7 +34,8 @@ namespace zad3
         public MainWindow()
         {
             InitializeComponent();
-            c_click(null,null);
+            c_click(null, null);
+            first = true;
         }
 
 
@@ -50,74 +49,85 @@ namespace zad3
 
         private void arrow_click(object sender, RoutedEventArgs e)
         {
-            numString = numString.Remove(numString.Length);
+            if (first)
+            {
+                c_click(null, null);
+                first = false;
+            }
+            if (Goodstring.Length != 0)
+            {
+                Goodstring = Goodstring.Remove(Goodstring.Length - 1);
+                numLength--;
+            }
         }
 
         private void action_click(object sender, RoutedEventArgs e)
         {
-            if (first||lastEq)
+            if (first)
             {
-                first = false;
-                lastEq = false;
                 c_click(null, null);
                 Goodstring += "0";
+                first = false;
             }
-            numLength = 0;
-            if (lastSymb)
+            if (numLength==0)
             {
                 Goodstring = goodstring.Remove(goodstring.Length - 3, 3);
             }
-                Goodstring += $" {(sender as Button).Content.ToString()} ";
-            lastSymb = true;
+            Goodstring += $" {(sender as Button).Content.ToString()} ";
+            numLength = 0;
         }
 
-        private void equal_click(object sender, RoutedEventArgs e)  
+        private void equal_click(object sender, RoutedEventArgs e)
         {
             if (Goodstring == "") return;
-            if (lastSymb) Goodstring = Goodstring.Remove(goodstring.Length - 3, 3);
+            if (numLength==0) Goodstring = Goodstring.Remove(goodstring.Length - 3, 3);
 
-            MessageBox.Show($"parsing {Goodstring}");
+            //MessageBox.Show($"parsing {Goodstring}");
             List<string> nums = new List<string>(Goodstring.Split(' '));
             double num1;
-            num1 = double.Parse(nums[0]);
 
             for (int i = 0; i < nums.Count(); i++)
             {
                 if (nums[i] == "*")
                 {
                     nums[i - 1] = (double.Parse(nums[i - 1]) * double.Parse(nums[i + 1])).ToString();
-                    nums.RemoveRange(i,2);
-                }else if (nums[i] == "/"){
-                    if(double.Parse(nums[i + 1]) == 0)
+                    MessageBox.Show($"{nums[i - 1]}");
+                    nums.RemoveRange(i, 2);
+                }
+                else if (nums[i] == "/")
+                {
+                    if (double.Parse(nums[i + 1]) == 0)
                     {
                         result.Text = "Делить на ноль нельзя";
                     }
                     nums[i - 1] = (double.Parse(nums[i - 1]) / double.Parse(nums[i + 1])).ToString();
-                    nums.RemoveRange(i,2);
-                } 
-                
+                    nums.RemoveRange(i, 2);
+                }
+
             }
-            for (int i = 0; i < nums.Count() -2; i+=2)
+            num1 = double.Parse(nums[0]);
+            for (int i = 0; i < nums.Count() - 2; i += 2)
             {
                 if (nums[i + 1] == "-")
                 {
-                    num1 = num1 - double.Parse(nums[i+2]);
-                } else if (nums[i + 1] == "+")
+                    num1 = num1 - double.Parse(nums[i + 2]);
+                }
+                else if (nums[i + 1] == "+")
                 {
-                    num1 = num1 + double.Parse(nums[i+2]);
+                    num1 = num1 + double.Parse(nums[i + 2]);
                 }
             }
             result.Text = num1.ToString();
-            lastEq = true;
+            first = true;
         }
 
         private void dot_click(object sender, RoutedEventArgs e)
         {
             if (first)
             {
-                first = false;
                 c_click(null, null);
                 Goodstring += "0";
+                first = false;
             }
             numLength = 0;
             Goodstring += ",";
@@ -125,31 +135,31 @@ namespace zad3
 
         private void num_click(object sender, RoutedEventArgs e)
         {
-            if (first||lastEq)
+            if (first)
             {
-                first = false;
-                lastEq = false;
                 c_click(null, null);
+                first = false;
             }
-            lastSymb = false;
             Goodstring += (sender as Button).Content.ToString();
             numLength++;
         }
 
         private void c_click(object sender, RoutedEventArgs e)
         {
-            goodstring = "";
-            numString = "";
-            numLength = 0;
-            lastEq = false;
-            lastSymb = false;
             first = true;
+            Goodstring = "";
+            numLength = 0;
+            result.Text = "";
         }
 
         private void CE_click(object sender, RoutedEventArgs e)
         {
-            if(!lastSymb)
-            goodstring = goodstring.Remove(goodstring.Length + numLength);
+            if (numLength > 0)
+            {
+               // MessageBox.Show($"{Goodstring.Length}\n{numLength}");
+                Goodstring = Goodstring.Remove(Goodstring.Length - numLength, numLength);
+                numLength = 0;
+            }
         }
     }
 }
