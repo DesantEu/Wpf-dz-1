@@ -1,0 +1,14 @@
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\bin\Debug\Wpf-pr-2.exe.config
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\bin\Debug\Wpf-pr-2.exe
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\bin\Debug\Wpf-pr-2.pdb
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2.csprojResolveAssemblyReference.cache
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\MainWindow.g.cs
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\App.g.cs
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2_MarkupCompile.cache
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2_MarkupCompile.lref
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\MainWindow.baml
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2.g.resources
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf_pr_2.Properties.Resources.resources
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2.csproj.GenerateResource.Cache
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2.exe
+c:\users\mak\documents\visual studio 2017\Projects\Wpf-pr-2\Wpf-pr-2\obj\Debug\Wpf-pr-2.pdb
