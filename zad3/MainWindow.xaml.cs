@@ -69,7 +69,7 @@ namespace zad3
                 Goodstring += "0";
                 first = false;
             }
-            if (numLength==0)
+            if (numLength == 0)
             {
                 Goodstring = goodstring.Remove(goodstring.Length - 3, 3);
             }
@@ -80,7 +80,7 @@ namespace zad3
         private void equal_click(object sender, RoutedEventArgs e)
         {
             if (Goodstring == "") return;
-            if (numLength==0) Goodstring = Goodstring.Remove(goodstring.Length - 3, 3);
+            if (numLength == 0) Goodstring = Goodstring.Remove(goodstring.Length - 3, 3);
 
             //MessageBox.Show($"parsing {Goodstring}");
             List<string> nums = new List<string>(Goodstring.Split(' '));
@@ -91,7 +91,7 @@ namespace zad3
                 if (nums[i] == "*")
                 {
                     nums[i - 1] = (double.Parse(nums[i - 1]) * double.Parse(nums[i + 1])).ToString();
-                    MessageBox.Show($"{nums[i - 1]}");
+                    //MessageBox.Show($"{nums[i - 1]}");
                     nums.RemoveRange(i, 2);
                 }
                 else if (nums[i] == "/")
@@ -128,7 +128,7 @@ namespace zad3
                 c_click(null, null);
                 first = false;
             }
-            if(numLength==0)
+            if (numLength == 0)
                 Goodstring += "0";
             numLength++;
             Goodstring += ",";
@@ -140,6 +140,12 @@ namespace zad3
             {
                 c_click(null, null);
                 first = false;
+            }
+
+            if (goodstring.Length > 0 && goodstring[goodstring.Length - 1] == '0' && numLength == 1)
+            {
+                Goodstring = Goodstring.Remove(Goodstring.Length - 1);
+                numLength--;
             }
             Goodstring += (sender as Button).Content.ToString();
             numLength++;
@@ -157,7 +163,7 @@ namespace zad3
         {
             if (numLength > 0)
             {
-               // MessageBox.Show($"{Goodstring.Length}\n{numLength}");
+                // MessageBox.Show($"{Goodstring.Length}\n{numLength}");
                 Goodstring = Goodstring.Remove(Goodstring.Length - numLength, numLength);
                 numLength = 0;
             }
