@@ -126,10 +126,11 @@ namespace zad3
             if (first)
             {
                 c_click(null, null);
-                Goodstring += "0";
                 first = false;
             }
-            numLength = 0;
+            if(numLength==0)
+                Goodstring += "0";
+            numLength++;
             Goodstring += ",";
         }
 
